@@ -3,11 +3,13 @@
   <head>
 
     {{ content_for_header }}
+    {{ 'style.css' | asset_url |  stylesheet_tag }}
+    {{ 'script.js' | asset_url |  script_tag }}
 
   </head>
 
   <body>
-
+    {% render 'header'%}
       {{ content_for_layout }}
    
   </body>
